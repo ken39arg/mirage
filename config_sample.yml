@@ -31,6 +31,12 @@ docker:
   # if you specify this, fill the form as default value on web interface.
   # default_image: myapp:latest
 
+  # https://godoc.org/github.com/fsouza/go-dockerclient#HostConfig
+  # host_config:
+  #   Links:
+  #     - mysql:mysql
+  #     - redis:redis
+
 storage:
   datadir: ./data
   htmldir: ./html

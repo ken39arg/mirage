@@ -64,7 +64,7 @@ func (d *Docker) Launch(subdomain string, image string, option map[string]string
 		return err
 	}
 
-	err = d.Client.StartContainer(container.ID, nil)
+	err = d.Client.StartContainer(container.ID, d.cfg.Docker.HostConfig)
 	if err != nil {
 		fmt.Println("cannot start container")
 		return err
